@@ -12,12 +12,12 @@ struct ContentView: View {
         TabView{
             MapView()
                 .tabItem{
-                    Label("Map", systemImage: "Map")
+                    Label("Map", systemImage: "map")
                 }
             
             ReportView()
                 .tabItem{
-                    Label("Report", systemImage: "Map")
+                    Label("Report", systemImage: "exclamationmark.bubble")
                 }
             
             

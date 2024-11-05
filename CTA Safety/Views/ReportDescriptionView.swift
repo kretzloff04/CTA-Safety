@@ -10,7 +10,7 @@ import SwiftUI
 struct ReportDescriptionView: View {
     @State private var titleInput:String = ""
     @State private var descriptionInput:String = ""
-    @State private var priorityLevelInput: Bool = false
+    @State private var priorityLevelInput: Int = 0
     var body: some View {
         ZStack{
             Image("ctaMap")
@@ -23,19 +23,21 @@ struct ReportDescriptionView: View {
                     .textFieldStyle(.roundedBorder)
                     .frame(width: 350, height: 100)
                 Text("Description")
+                TextEditor(text: $descriptionInput)
                 if descriptionInput.isEmpty {
-                                Text("Enter your description here")
-                                    .foregroundColor(.gray)
-                                    .padding(.horizontal, 8)
-                                    .padding(.vertical, 12)
-                            }
-                            
-                            TextEditor(text: $descriptionInput)
-                                .padding(4)
-                                .border(Color.gray, width: 1)
-                                .cornerRadius(5)
-                        }
-                        .frame(width: 350, height: 200)
+                    Text("Enter a description")
+                        .foregroundColor(.gray)
+                        .padding(.horizontal, 4)
+                        .padding(.vertical, 8)
+                        
+                }
+                
+                HStack{
+                    
+                }
+                
+            }
+            .frame(width: 350, height: 200)
                     
                 
             }

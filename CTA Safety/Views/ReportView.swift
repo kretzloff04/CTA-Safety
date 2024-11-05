@@ -30,7 +30,7 @@ struct ReportView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.black, lineWidth: 2)
                             .frame(width: 300, height: 50)
-                        NavigationLink(destination: MakeReportView()){
+                        NavigationLink(destination: MakeReportView(lineColor: Color("customRed"), stopsImage: Image("redLineStops"))){
                             Text("Red Line")
                                 .frame(width: 300, height: 50)
                                 .foregroundColor(Color.white)
@@ -42,7 +42,7 @@ struct ReportView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.black, lineWidth: 2)
                             .frame(width: 300, height: 50)
-                        NavigationLink(destination: MakeReportView()){
+                        NavigationLink(destination: MakeReportView(lineColor: Color("customBlue"), stopsImage: Image("blueLineStops"))){
                             Text("Blue Line")
                                 .frame(width: 300, height: 50)
                                 .foregroundColor(Color.white)
@@ -54,7 +54,7 @@ struct ReportView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.black, lineWidth: 2)
                             .frame(width: 300, height: 50)
-                        NavigationLink(destination: MakeReportView()){
+                        NavigationLink(destination: MakeReportView(lineColor: Color("customBrown"), stopsImage: Image("brownLineStops"))){
                             Text("Brown Line")
                                 .frame(width: 300, height: 50)
                                 .foregroundColor(Color.white)
@@ -66,7 +66,7 @@ struct ReportView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.black, lineWidth: 2)
                             .frame(width: 300, height: 50)
-                        NavigationLink(destination: MakeReportView()){
+                        NavigationLink(destination: MakeReportView(lineColor: Color("customGreen"), stopsImage: Image("greenLineStops"))){
                             Text("Green Line")
                                 .frame(width: 300, height: 50)
                                 .foregroundColor(Color.white)
@@ -78,7 +78,7 @@ struct ReportView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.black, lineWidth: 2)
                             .frame(width: 300, height: 50)
-                        NavigationLink(destination: MakeReportView()){
+                        NavigationLink(destination: MakeReportView(lineColor: Color("customOrange"), stopsImage: Image("orangeLineStops"))){
                             Text("Orange Line")
                                 .frame(width: 300, height: 50)
                                 .foregroundColor(Color.white)
@@ -90,7 +90,7 @@ struct ReportView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.black, lineWidth: 2)
                             .frame(width: 300, height: 50)
-                        NavigationLink(destination: MakeReportView()){
+                        NavigationLink(destination: MakeReportView(lineColor: Color("customPink"), stopsImage: Image("pinkLineStops"))){
                             Text("Pink Line")
                                 .frame(width: 300, height: 50)
                                 .foregroundColor(Color.white)
@@ -102,7 +102,7 @@ struct ReportView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.black, lineWidth: 2)
                             .frame(width: 300, height: 50)
-                        NavigationLink(destination: MakeReportView()){
+                        NavigationLink(destination: MakeReportView(lineColor: Color("customPurple"), stopsImage: Image("purpleLineStops"))){
                             Text("Purple Line")
                                 .frame(width: 300, height: 50)
                                 .foregroundColor(Color.white)
@@ -114,7 +114,7 @@ struct ReportView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.black, lineWidth: 2)
                             .frame(width: 300, height: 50)
-                        NavigationLink(destination: MakeReportView()){
+                        NavigationLink(destination: MakeReportView(lineColor: Color("customYellow"), stopsImage: Image("yellowLineStops"))){
                             Text("Yellow Line")
                                 .frame(width: 300, height: 50)
                                 .foregroundColor(Color.white)

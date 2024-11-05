@@ -8,18 +8,10 @@
 import SwiftUI
 
 struct MakeReportView: View {
-    var body: some View {
-        MakeReportViews()
-    }
-}
-
-#Preview {
-    MakeReportView()
-}
-
-struct MakeReportViews: View{
     
-    var body: some View{
+    var lineColor: Color
+    var stopsImage: Image
+    var body: some View {
         NavigationView{
             ZStack{
                 Image("ctaMap")
@@ -34,9 +26,31 @@ struct MakeReportViews: View{
                         .foregroundColor(Color.white)
                         .cornerRadius(0.5)
                     
+                    if stopsImage == Image("redLineStops") || stopsImage == Image("brownLineStops") || stopsImage == Image("blueLineStops") || stopsImage == Image("orangeLineStops") || stopsImage == Image("purpleLineStops"){
+                        stopsImage
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width:275, height: 350)
+                            .padding(.bottom, 10)
+                    }
+                    else if stopsImage == Image("greenLineStops") || stopsImage == Image("pinkLineStops"){
+                        stopsImage
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 200, height: 250)
+                    }
+                    else if stopsImage == Image("yellowLineStops"){
+                        stopsImage
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 150, height: 200)
+                        
+                    }
+                    
+                    
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.red, lineWidth: 2)
+                            .stroke(Color(lineColor), lineWidth: 2)
                             .frame(width: 300, height: 50)
                         NavigationLink(destination: ReportDescriptionView()){
                             Text("Report Smoking")
@@ -48,7 +62,7 @@ struct MakeReportViews: View{
                     }.padding()
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.red, lineWidth: 2)
+                            .stroke(Color(lineColor), lineWidth: 2)
                             .frame(width: 300, height: 50)
                         NavigationLink(destination: ReportDescriptionView()){
                             Text("Report Loud Disruptions")
@@ -60,7 +74,7 @@ struct MakeReportViews: View{
                     }.padding()
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.red, lineWidth: 2)
+                            .stroke(Color(lineColor), lineWidth: 2)
                             .frame(width: 300, height: 50)
                         NavigationLink(destination: MapView()){
                             Text("Report Physical Altercation")
@@ -72,7 +86,7 @@ struct MakeReportViews: View{
                     }.padding()
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.red, lineWidth: 2)
+                            .stroke(Color(lineColor), lineWidth: 2)
                             .frame(width: 300, height: 50)
                         NavigationLink(destination: MapView()){
                             Text("Report Other")
@@ -87,5 +101,9 @@ struct MakeReportViews: View{
         }
 
     }
+}
+
+#Preview {
+    MakeReportView(lineColor: Color("customRed"), stopsImage: Image("purpleLineStops"))
 }
 
